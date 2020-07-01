@@ -1,8 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+  <%- include('partials/header'); -%>
   <body>
-    <%- include('header'); -%>
-    <main class="container"></main>
-    <%- include('footer'); -%>
+    <main class="container">
+      <h1 class="text-uppercase my-1">Home</h1>
+      <div class="scroll">
+        <h2 class="my-1">Aw, you're all Mr. Grumpy Face today.</h2>
+        <p class="text-capitalize"><%= homeContent %></p>
+        <% for(let post of posts){ %>
+        <h2 class="text-capitalize"><%= post.title %></h2>
+        <p><%= post.content %></p>
+        <%}%>
+        <div class="buffer"></div>
+      </div>
+      <form action="/" method="POST" class="mt-2">
+        <button
+          class="btn glow d-flex align-items-center justify-content-center"
+          type="submit"
+          name="newPost"
+          value="home"
+        >
+          <svg
+            width="1.5em"
+            height="1.5em"
+            viewBox="0 0 16 16"
+            class="bi bi-plus"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M8 3.5a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5H4a.5.5 0 0 1 0-1h3.5V4a.5.5 0 0 1 .5-.5z"
+            />
+            <path
+              fill-rule="evenodd"
+              d="M7.5 8a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0V8z"
+            />
+          </svg>
+          New
+        </button>
+      </form>
+    </main>
+    <%- include('partials/footer'); -%>
   </body>
 </html>
