@@ -3,8 +3,10 @@
   <%- include('partials/header'); -%>
   <body>
     <main class="container">
-      <h2 class="text-capitalize my-2"><%= postTitle %></h2>
-      <p class="mt-3"><%= postContent %></p>
+      <div class="scroll" style="height: 550px;">
+        <h2 class="text-capitalize my-2"><%= postTitle %></h2>
+        <p class="mt-3"><%= postContent %></p>
+      </div>
     </main>
     <%- include('partials/footer'); -%>
   </body>

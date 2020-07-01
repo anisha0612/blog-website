@@ -6,10 +6,13 @@
       <h1 class="text-uppercase my-1">Home</h1>
       <div class="scroll">
         <h2 class="my-1">Aw, you're all Mr. Grumpy Face today.</h2>
-        <p class="text-capitalize"><%= homeContent %></p>
+        <p class="text-capitalize"><%= homeContent.slice(0,200)+"..." %></p>
         <% for(let post of posts){ %>
         <h2 class="text-capitalize"><%= post.title %></h2>
-        <p><%= post.content %></p>
+        <p>
+          <%= post.content.slice(0,100)+"..." %>
+          <a href="/posts/<%=post.title%>">Read More</a>
+        </p>
         <%}%>
         <div class="buffer"></div>
       </div>
