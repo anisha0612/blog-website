@@ -8,13 +8,13 @@
         <% for(let post of posts){ %>
         <h2 class="text-capitalize"><%= post.title %></h2>
         <p>
-          <%= post.content.slice(0,100)+"..." %>
+          <%= post.content.slice(0,200)+"..." %>
           <a href="/posts/<%=post.title%>">Read More</a>
         </p>
         <%}%>
         <div class="buffer"></div>
       </div>
-      <form action="/" method="POST" class="mt-2">
+      <form action="/" method="POST">
         <button
           class="btn glow d-flex align-items-center justify-content-center"
           type="submit"

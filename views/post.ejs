@@ -5,12 +5,12 @@
     <main class="container">
       <form action="/delete" method="POST">
         <h2 class="text-capitalize my-2"><%= postTitle %></h2>
-        <div class="scroll" style="height: 300px;">
+        <div class="scroll" style="height: 350px;">
           <p class="mt-3"><%= postContent %></p>
         </div>
         <button
           type="submit"
-          class="glow btn d-flex align-items-center justify-content-center"
+          class="glow btn d-flex align-items-center justify-content-center mt-1"
           id="delete"
           name="post"
           value="<%=postTitle%>"
