@@ -1,4 +1,4 @@
-Blogging website using node,express, ejs and mongoDB
+Blogging website using node,express.js, ejs and mongoDB
 
 To load the project:
 
